@@ -3,8 +3,8 @@ FROM maven:3.9.4-eclipse-temurin-17 AS build
 
 WORKDIR /app
 
-# Source code ni copy cheyyadam
-COPY . .
+# Source code ni correct folder nunchi copy cheyyadam
+COPY timesheet/ .
 
 # Tests skip chesi JAR build cheyyadam
 RUN mvn clean package -DskipTests

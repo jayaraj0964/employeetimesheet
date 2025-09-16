@@ -45,6 +45,11 @@ public class AuthController {
     @Autowired
     private JwtUtil jwtUtil;
 
+    @GetMapping("/testing")
+    public void  hello(){
+        System.out.println("hello mowa");
+    }
+
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody RegisterRequest request) {
         logger.info("📥 Register request received for username: {}", request.getUsername());
